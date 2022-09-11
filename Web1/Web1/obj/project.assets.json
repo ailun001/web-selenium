@@ -146,11 +146,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\work\\web_c#\\Web1\\Web1\\Web1.csproj",
+      "projectUniqueName": "E:\\work\\web-selenium\\Web1\\Web1\\Web1.csproj",
       "projectName": "Web1",
-      "projectPath": "E:\\work\\web_c#\\Web1\\Web1\\Web1.csproj",
+      "projectPath": "E:\\work\\web-selenium\\Web1\\Web1\\Web1.csproj",
       "packagesPath": "C:\\Users\\ailun\\.nuget\\packages\\",
-      "outputPath": "E:\\work\\web_c#\\Web1\\Web1\\obj\\",
+      "outputPath": "E:\\work\\web-selenium\\Web1\\Web1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ailun\\AppData\\Roaming\\NuGet\\NuGet.Config",

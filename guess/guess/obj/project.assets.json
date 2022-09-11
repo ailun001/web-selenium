@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\work\\web_c#\\guess\\guess\\guess.csproj",
+      "projectUniqueName": "E:\\work\\web-selenium\\guess\\guess\\guess.csproj",
       "projectName": "guess",
-      "projectPath": "E:\\work\\web_c#\\guess\\guess\\guess.csproj",
+      "projectPath": "E:\\work\\web-selenium\\guess\\guess\\guess.csproj",
       "packagesPath": "C:\\Users\\ailun\\.nuget\\packages\\",
-      "outputPath": "E:\\work\\web_c#\\guess\\guess\\obj\\",
+      "outputPath": "E:\\work\\web-selenium\\guess\\guess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ailun\\AppData\\Roaming\\NuGet\\NuGet.Config",

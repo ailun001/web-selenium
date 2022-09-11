@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SuklPQAQhOVlbvpZciaOS/RdjioiVgrdTCqJ0K9R6joZQlAE8j182VxHncOq9M3bxQTsBXi+JfVnVNmbi0Twig==",
+  "dgSpecHash": "GkDUMVHs/HTo1AjvyjjIrvS6JGL86mD3LVleKTs1lOZ27W/9XUROCFsPiiVEY/zMwrrKzJtroyaqHq2fyqt0gw==",
   "success": true,
-  "projectFilePath": "E:\\work\\web_c#\\guess\\guess\\guess.csproj",
+  "projectFilePath": "E:\\work\\web-selenium\\guess\\guess\\guess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
