@@ -1,6 +1,8 @@
 ﻿
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
+using static System.Net.WebRequestMethods;
 
 namespace Web1
 {
@@ -27,6 +29,84 @@ namespace Web1
             IWebElement searchInput = webDriver.FindElement(By.Name("q"));
             searchInput.SendKeys("facebook");
             searchInput.Clear();
+
+
+            //Web2
+
+            webDriver.SwitchTo().NewWindow(WindowType.Tab);
+            webDriver.Url = "http://106.15.238.71/testpage1.html";
+
+            //name 
+            webDriver.FindElement(By.Name("submit")).Submit();
+            //tagname
+            IWebElement elementSubmit = webDriver.FindElement(By.TagName("button"));
+            elementSubmit.Submit();
+            //linktext
+            webDriver.FindElement(By.LinkText("Link Test")).Click();
+            webDriver.Navigate().Back();
+            //partial linktext
+            webDriver.FindElement(By.PartialLinkText("Partial")).Click();
+            webDriver.Navigate().Back();
+            //XPath (copy full Xpath)
+            webDriver.FindElement(By.XPath("/html/body/form/fieldset/div[14]/div/button")).Click();
+
+            //mutiple (2 choose 1) 
+            IList<IWebElement> elementsSex = webDriver.FindElements(By.Name("sex"));
+            bool femaleSelected = elementsSex.ElementAt(1).Selected;
+            if (femaleSelected)
+            {
+                elementsSex.ElementAt(0).Click();// male selected
+                Console.WriteLine("male selected");
+            }
+            else 
+            { 
+                elementsSex.ElementAt(1).Click(); //female selected
+            }
+            //mutiple (++ choose 1)
+            webDriver.FindElement(By.Id("exp-3")).Click(); // exp : 4 selected
+
+            //mtiple (checkbox)
+            IList<IWebElement> elementsPro = webDriver.FindElements(By.Name("profession"));
+            for (int i = 0; i < elementsPro.Count; i++)
+            {
+                if(elementsPro.ElementAt(i).GetAttribute("value").Equals("Automation Tester"))
+                {
+                    elementsPro.ElementAt(i).Click();
+                    Console.WriteLine("aut selected");
+                    //break;
+                    // aut selected
+                }
+            }
+
+            //css selector
+            webDriver.FindElement(By.CssSelector("#tool-1")).Click(); 
+            Console.WriteLine("selenium ide selected");
+
+            //select selector (dropdown)
+            SelectElement selectElementContinents = new SelectElement(webDriver.FindElement(By.Id("continents")));
+            selectElementContinents.SelectByText("Australia");
+            Console.WriteLine("au selected");
+            selectElementContinents.SelectByIndex(1);//europe 
+
+            for (int i = 0; i < selectElementContinents.Options.Count; i++)
+            {
+                if (selectElementContinents.Options.ElementAt(i).Equals("Antartica"))
+                {
+                    selectElementContinents.SelectByIndex(i);// last (antartica)
+                }
+            }
+
+            //select selector mutiple
+            SelectElement selectElementCommand = new SelectElement(webDriver.FindElement(By.Name("selenium_commands"));
+            selectElementCommand.SelectByIndex(0);
+            selectElementCommand.DeselectByIndex(0);
+            selectElementCommand.SelectByText("Switch Commands");
+            selectElementCommand.DeselectByText("Switch Commands");
+            for (int i = 0; i < selectElementCommand.Options.Count; i++)
+            {
+                selectElementCommand.SelectByIndex(i);
+            }
+            selectElementCommand.DeselectAll();
 
             webDriver.Quit();
         }
