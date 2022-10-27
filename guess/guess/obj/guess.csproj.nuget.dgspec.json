@@ -10,11 +10,11 @@
         "projectUniqueName": "E:\\work\\web-selenium\\guess\\guess\\guess.csproj",
         "projectName": "guess",
         "projectPath": "E:\\work\\web-selenium\\guess\\guess\\guess.csproj",
-        "packagesPath": "C:\\Users\\ailun\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\kaiha\\.nuget\\packages\\",
         "outputPath": "E:\\work\\web-selenium\\guess\\guess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ailun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kaiha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
