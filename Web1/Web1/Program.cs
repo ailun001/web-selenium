@@ -2,6 +2,8 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+using OpenQA.Selenium.Support.UI.ExpectedConditions;
 using static System.Net.WebRequestMethods;
 
 namespace Web1
@@ -107,6 +109,39 @@ namespace Web1
                 selectElementCommand.SelectByIndex(i);
             }
             selectElementCommand.DeselectAll();
+
+
+            /*Web 3
+            <table>
+                <tr>
+                    <td>table role</td>
+                    <td>
+                        <table>
+                            <tr><td>t2 r1</tr></td>
+                            <tr><td>t2 r2</tr></td>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            */
+
+            //var table1 = webDriver.FindElement(By.TagName("table"));
+            //var table2 = table1.FindElement(By.TagName("table"));
+            //var row1 = table2.FindElements(By.TagName("td"))[0];
+
+            //wait
+            //隐
+            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+            Thread.Sleep(10000);
+            //显
+            WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
+            IWebElement result = wait.Until(element => element.FindElement(By.Id("")));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.Id("")));
+            result.Click();
+
+
+
 
             webDriver.Quit();
         }
